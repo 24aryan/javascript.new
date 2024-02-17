@@ -55,3 +55,39 @@ const heros=["ironman","thor"]
 //        Arrays  =>  object
 //        Function  =>  function (its object function)
 //        Object  =>  object
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//stack(primitive)  heap(non-primitive)
+// primitive -call by value(give copy)
+// non-primitive - call by reference (give original)
+
+let myname="Aryan";
+//storing the value of one variable to another
+let anothername=myname;
+//now assigning new value to another name
+anothername="Mishra"
+// both the values for this log will be different 
+// but we are calling same as another name stores my name and then we gave new value to it 
+// it's because the value we are calling from another name was just a copy . so original don't get remove and returns 
+// it's called call by value in this the value's copy is called not the original (primitive data-type)
+console.log(anothername);
+console.log(myname);
+
+// now here we declared a object which is non-primitive 
+let one={
+   name:"Aryan",
+   age:"19"
+}
+let two=one
+// here the answer will be printed same and it should be because we didn't gave another value
+//but the major difference is unlike the primitve data-type here the value will be called y reference
+// and in this the original value will print not the copy
+console.log(one);
+console.log(two);
+
+// now try changing and assigning new value
+two.age="20"
+// now unlike as we tried to assign value in primitive but the value didn't change because it was copy
+// here the value is changed because both are coming by reference and changes simultaneously
+console.log(one.age);
+console.log(two.age);
