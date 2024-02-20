@@ -24,4 +24,30 @@ console.log(gamename[0]);
 console.log(gamename.length);
 // similarly different methods are uppercase(),charAt(),indexof()
 
-////////////////////pending //////////////////////
+// then we have .substring to print elements from specified indexies
+// and a similar one slice and we can print reverse elements in this by giving negative index
+
+// const newstring=gamename.slice(-5,2)
+// console.log(newstring);
+ // a bit of problem in understanding of this index
+
+ const newone="    Aryan    "
+ // now here in this string i have a lot of space which i don't need if i want to create a database so i will use trim to remove this spaces
+ // and we have trim start and trim end methods also
+ // it works on white spaces and line terminators
+//  console.log(newone);
+//  console.log(newone.trim());
+
+ // now we have a method replace() 
+ // for eg we have an url and we want space in it but its something else there so we can use this 
+ const link='https://Aryanmishra%20Aryan.com'
+ // here it asked us what to replace and with what
+ console.log(link.replace('%20','-'))
+
+ // with this link we can ask if any element is present in it or not
+ console.log(link.includes('aryan'));
+
+ // then we have a method split to split the string on basics of character space word an it will split the string
+ console.log(gamename.split(' '));
+
+ //check as many methods you can and try
