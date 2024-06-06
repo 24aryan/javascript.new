@@ -69,4 +69,11 @@ console.log(date.getTime());
 // .gettime() Returns the stored time value in milliseconds since midnight, January 1, 1970 UTC.
 // but here we have date. as reference so it calculates the time from that period 
 
-console.log(date.getMonth())
+console.log(date.getMonth()+1)
+// here +1 is used as month start from 0 in js bcoz of array
+// basic more methods are there which we can access easily by referencing the object 
+
+date.toLocaleString('default',{
+    weekday:"short"
+})
+// as seen above the use of locale string  and we can further customize it here and for suggestion use ctrl+space 
