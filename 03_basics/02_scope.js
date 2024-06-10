@@ -28,4 +28,4 @@ console.log(c);
 // and we can variable of same name but they will be valid in their scope only if declared as global then like it 
 // and if in ablock of scope valid for that only
 
-// the cope in browser cors and in the node acts differently
+// the scope in browser cors and in the node acts differently
