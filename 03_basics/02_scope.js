@@ -16,12 +16,12 @@ if(true){
 }
 // now we have declared a condtion and declared variables inside it check there effect
 
-console.log(a);
+// console.log(a);
 // when a is printed it gives error as we are printing it outside the scope which is let
-console.log(b);
+// console.log(b);
 // same happens with b which is const
 // both of them are declared in  block scope or local scope  as they are valid inside them only
-console.log(c);
+// console.log(c);
 // but the c is printed even it is declared inside the scope as it acts as a global variable which gives value wherever declared 
 // which leads to overwrite of values and bugs
 
@@ -29,3 +29,52 @@ console.log(c);
 // and if in ablock of scope valid for that only
 
 // the scope in browser cors and in the node acts differently
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function one(){
+    const username = "Aryan"
+
+    // declaring function in function
+
+    function two(){
+      const website ="Youtube"
+      // printing the variable of first function we can do this
+      console.log(username);
+    }
+    // using variable of two
+    // but can't use it as it's out of scope
+    // console.log(website);
+    // calling two
+    two() 
+}
+
+// one()
+
+if(true){
+    const username ="Aryan"
+    if(username==="Aryan"){
+        const website = " youtube"
+        console.log(username + website);
+    }
+    // console.log(website); it is an error
+}
+// console.log(username);it is an error
+
+//++++++++++++++++++++++++++++++++++ interesting
+
+//here we can call function before it's declarement
+console.log(addone(5))
+// one way to declare function
+function addone(num){
+   return num +1
+}
+
+// but here we can't call it 
+// now declaring it as an expression
+const numtwo = function (num){
+    return num+2
+}
+
+console.log(numtwo(8))
