@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+    <style>
+        .bg-black{
+            background-color:rgb(41, 39, 39);
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id ="title" class="heading">DOM LEARNING CHAI</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <input type="password" >
+
+        <ul>
+         <li  class="listitem">one </li>
+         <li  class="listitem">two</li>
+         <li  class="listitem">three</li>
+         <li  class="listitem">four</li>
+</ul>
+    </div>
+</body>
+</html>
+
+
+<!--
+to get element there are multiple ways to chekc just use  get and then reference will be there 
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM LEARNING CHAI​</h1>​
+
+document.getElementById('title').innerHTML('hello everyone')
+
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').className // here by class name as the console read it like this not as class
+'heading'
+
+to get all attribute
+document.getElementById('title').getAttribute('class')
+'heading' 
+
+to set all attribute and this overwrite elements
+document.getElementById('title').setAttribute('class')
+
+
+const title = document.getElementById('title')
+undefined
+title.st
+undefined
+title.style.backgroundColor = 'yellow'
+'yellow'
+title.style.backgroundColor = 'green'
+'green'
+
+interesting
+
+
+title.innerText
+'DOM LEARNING CHAI'
+title.textContent
+'DOM LEARNING CHAI'
+title.innerHTML
+'DOM LEARNING CHAI'
+
+all three of them dom selectors giving same o/p but why
+
+
+now for eg if you take some more text in it and hide it with some css 
+then if you print innertext the hidden text will not be printed
+
+and on other hand textcontent will still display that as o/p
+
+inner html will give you everything even the html of that id
+
+----- query selector -----
+mainly all type of selector which we use in css can be used in same way
+
+document.querySelector('h2')
+<h2>​Lorem ipsum dolor sit amet​</h2>​
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​DOM LEARNING CHAI​</h1>​
+
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​DOM LEARNING CHAI​</h1>​
+
+document.querySelector('input[type="password"]')
+<input type=​"password">​
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+const myul = document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​
+
+
+-----query selector all can select all elements as a node list which is different from array
+but need to access it as array elements---
+
+const myLIList = document.querySelectorAll('li')
+undefined
+myLIList
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3
+[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+myLIList[0].style.color ="green"
+'green'
+
+
+---- get element by classname 
+gives htmlcollection and have functionalities
+document.getElementbyclassname('')
+now to use for each to loop in the elements having same class need to convert collections and to do so
+use array and .from function and here using the stored variable
+Array.from(list)
+(4) [li.listitem, li.listitem, li.listitem, li.listitem]
+then we can use all function as a normal array here 
+-->
