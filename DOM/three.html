@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai and Code</title>
+</head>
+<body style = "background-color: #212121; color: aliceblue;">
+
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() *100 +1 )
+    div.setAttribute("title" , "Generated title") // more prefered option 
+    div.style.backgroundColor ="green"
+    div.style.padding = "10px"
+    // div.innerText = "chai aur code" // this is also used to add text
+    const text = document.createTextNode("chai aur code") // but this is more used due to optimization
+    // String that specifies the nodeValue property of the text node.
+    div.appendChild(text) // add the child
+
+    document.body.appendChild(div) // going into body and doing append child 
+    // and adding the div what we created
+</script>
+</html>
