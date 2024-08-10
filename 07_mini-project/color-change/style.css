@@ -1,0 +1,53 @@
+html{
+overflow: hidden;
+margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    border: solid black 2px;
+}
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 300;
+}
+span{
+    display: block;
+}
+
+.content{
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+
+.buttons{
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+    /* text-align: center; */
+}
+
+#grey{
+    background-color: grey;
+}
+
+#yellow{
+    background-color:yellow;
+}
+
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}
