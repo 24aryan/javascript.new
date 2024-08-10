@@ -1,0 +1,46 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="/" aria-current="page">Home</a>
+            <a target="_blank" href="www.google.com">Google</a>
+            <!-- _blank: Load the URL into a new browsing context.
+            This is usually a tab, but users can configure browsers to use new windows instead. -->
+        </nav> 
+        <br>
+
+    <div class="container">
+
+        <h2>BMI Calculator</h2>
+
+        <form>
+
+    <p><label>Height in cm : </label><input type="text" id="height"> </p>
+
+    <p> <label >Weight in kg : </label> <input type="text"  id="weight">  </p>
+
+    <button type="submit">Calculate</button>
+
+        <div id="result">   </div>
+
+    <div id="info">
+
+        <h3>BMI Weight Guide</h3>
+            <p>Under Weight = Less than 18.6</p>
+            <p>Normal Range = 18.6 and 24.9</p>
+            <p>Overweight = Greater than 24.9</p>
+            
+            </div>
+    
+    </form>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
