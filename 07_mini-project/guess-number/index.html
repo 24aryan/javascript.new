@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess-number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="https://www.google.com">Google</a>
+        <!-- _blank: Load the URL into a new browsing context.
+          This is usually a tab, but users can configure browsers to use new windows instead. -->
+    </nav>
+
+    <h2> <span>Guess-number</span></h2>
+
+    <div id="wrapper">
+
+    <p>
+        Try and guess a random number between 1 and 100.
+    </p>
+    <p>
+        You have 10 attempts to guess the right number.
+    </p>
+    <br>
+    <form class="form">
+        <label for="guessfield" id="guess" style="font-size:28px;">
+            Guess a number :
+        </label> <br><br>
+        <input type="text" name="" id="guessfield" class="guessfield">
+        <br><br>
+        <input type="submit" id="subt" value="submit guess" class="guesssubmit">
+    </form>
+
+    <div class="resultparas">
+        <p>Previous Guesses: <span class="guesses">
+        </span></p>
+        <p>Guesses Remaining: <span class="lastresult">10</span></p>
+        <p class="loworHi"></p>
+    </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
