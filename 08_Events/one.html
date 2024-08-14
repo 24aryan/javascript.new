@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // in javascript events work in step by step sequentially
+    // except async functions
+
+
+    // approach one in the html tag directly
+    // approach 2
+    // document.getElementById('owl').onclick = function () {
+    //     alert("owl hi hu dekha nahi hai kya pehle")
+    // } purana tarika not enough features
+
+ // approach 3 & old one's
+    //attachEvent()
+    // jquery  -- on event 
+
+    // approach 4 latest
+    // document.getElementById('owl').addEventListener('click' , function(e){ // e is event object
+    //     console.log(e);
+        // multiple events exist and their functionalities of view , click and many more
+        // imp for js interviews 
+    // } , false // false is  default no need to define everytime 
+    // but in some functions it is necessary to define true or false to complete)
+// )
+
+// main events for interviews and learning
+// types of events , timestamps , defaultPrevented , 
+// target , toelemetn , srcElement , currentTarget 
+// clentX ,ClientY , ScreenX , ScreenY
+// altkey , ctrlkey , shiftkey , keycode (can make keyboard speed project
+    
+
+//event propagation
+
+// have two types in it 
+//event capturing (true for event listener comes in this category)
+// event public (false) and bubbling
+
+// document.getElementById('images').addEventListener('click' , function(e){
+//     console.log("clicked inside the ul"); 
+// },false)
+
+// document.getElementById('owl').addEventListener('click' , (e)=>{
+//     console.log("owl clicked");  
+//     e.stopPropagation();
+    // When dispatched in a tree, invoking this method prevents event from reaching 
+    // any objects other than the current object.
+
+// }, false)
+
+// now as we know that owl is also one of the images
+// and both events apply on it 
+// and by clicking we can see at first it's event and then the images event work
+// this is low to up events priority here
+// it's called event bubbling
+// in this way event is propagating here this is because of event public part basically
+
+// but the question is , is this the right thing it depends upon on our working
+// whether we want capturing or bubbling
+
+//now let us enabling event capturing by applying true 
+// in this method the all image works first then the owl event
+// it's working in top down 
+//clicked inside the ul
+// owl clicked
+
+
+// now for example working on something in which we don't want bubbling 
+// so stopPropagation is used it will limit to element own event will not go up 
+    
+// document.getElementById('google').addEventListener
+// ('click' ,(e)=>{
+//     e.preventDefault() // restricting it from it's original feature
+//     e.stopPropagation(); 
+//     console.log("google clicked");
+// } , false)
+
+
+// remove the image if clicked
+
+document.querySelector('#images').addEventListener('click' ,(e)=>{
+    //  console.log(e.target);// gives the exact src
+
+    // console.log(e.target.parentNode); // gives the exact parent of the target 
+    // in this case li of specific image
+
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG')// here checking the ntag name of the target if it's img then remove 
+    {
+    console.log(e.target.id);
+    
+    let removeIT = e.target.parentNode
+    removeIT.remove(); // approach 1 
+    }
+    // removeIT.parentNode.removeChild(removeIT)     // a bit confusing but new 
+    
+    // now you're clicking on img which have a parent li so li is getting remove
+    // but when you click the link gven here , it's a li element and it's parent is ul
+    // so the whole ul and everything in it will be removed 
+
+    // to prevent this use conditons amd other event functonalities
+})
+
+
+</script>
+
+</html>
